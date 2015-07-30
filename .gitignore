@@ -1,0 +1,11 @@
+.gradle
+.idea
+*.iml
+build
+tests-output
+
+
+# Elastic Beanstalk Files
+.elasticbeanstalk/*
+!.elasticbeanstalk/*.cfg.yml
+!.elasticbeanstalk/*.global.yml
