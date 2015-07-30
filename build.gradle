@@ -1,0 +1,10 @@
+apply plugin: 'java'
+
+allprojects {
+    repositories {
+        mavenCentral()
+        flatDir dirs: "$rootDir/libs"
+    }
+
+    [compileJava, compileTestJava]*.options*.encoding = 'UTF-8'
+}
