@@ -16,56 +16,6 @@ What is it
 Identification of textual formats is based on [Smartling ml-text](https://github.com/Smartling/ml-text) library. 
 
 
-Running
--------
-
-The service is based on Spring Boot, see [spring boot gradle](http://docs.spring.io/spring-boot/docs/current/reference/html/build-tool-plugins-gradle-plugin.html).
-
-Running in-place
-
-```bash
-./gradlew bootRun
-```
-
-
-API
----
-
-### identify
-
-`POST /v1/filetype/identify`
-
-The method expects `multipart/form-data` file upload.
-
-Example
-
-```bash
-curl -F "file=@example.lang" "https://api.smartling.com/v1/filetype/identify"
-```
-
-Response
-
-```json
-{"response":
-  {"data":
-    [
-      {"name": "example.lang",
-       "type": ["gettext","javaProperties","csv"],
-       "confidence": [0.82,0.41,0.1],
-       "referenceId": "a0b1c2d3"
-      }
-    ],
-  "code": "SUCCESS",
-  "messages": []
-}
-```
-
-
-SDK
----
-
-The service comes with a [Java client](client)
-
 
 Authors
 -------
