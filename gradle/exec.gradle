@@ -1,0 +1,15 @@
+ext.exec = { command ->
+    def output = new StringBuilder()
+    def error = new StringBuilder()
+
+    def process = command.execute()
+
+    process.consumeProcessOutput(output, error)
+
+    def ret = process.waitFor()
+    if(ret) {
+        throw new RuntimeException("Failed to execute command '${command}': ${error}")
+    }
+
+    return output.toString()
+}

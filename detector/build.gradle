@@ -25,6 +25,16 @@ dependencies {
     testRuntime "ch.qos.logback:logback-classic:1.1.3"
 }
 
+jar {
+    manifest {
+        attributes 'Built-By': System.getProperty('user.name')
+        attributes 'Implementation-Title': 'File Type Detector Core Library',
+            'Implementation-Version': "${rootProject.version} " + new Date(),
+            'Implementation-Vendor': 'Smartling Inc.',
+            'com/smartling/filetyped/core/'
+    }
+}
+
 test {
     testLogging.showStandardStreams = true
     reports.junitXml.destination = file("$rootDir/tests-output")
