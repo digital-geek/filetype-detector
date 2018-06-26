@@ -27,7 +27,6 @@ Running in-place
 ./gradlew bootRun
 ```
 
-
 API
 ---
 
