@@ -66,6 +66,11 @@ SDK
 The service comes with a [Java client](client)
 
 
+Detection Logic
+---------------
+
+[<img src="diagram.png" width="120"/>](diagram.png)
+
 Authors
 -------
 
