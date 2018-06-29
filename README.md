@@ -56,7 +56,7 @@ Response
     ],
   "code": "SUCCESS",
   "messages": []
-}
+}}
 ```
 
 
